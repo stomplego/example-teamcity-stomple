@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
+import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -27,6 +28,8 @@ version = "2026.1"
 
 project {
 
+    vcsRoot(HttpsGithubComStomplegoExampleTeamcityStomple1)
+
     buildType(Stomple)
     buildType(MavenBuild)
 }
@@ -40,7 +43,7 @@ object MavenBuild : BuildType({
     }
 
     vcs {
-        root(DslContext.settingsRoot)
+        root(HttpsGithubComStomplegoExampleTeamcityStomple1)
 
         cleanCheckout = true
     }
@@ -73,5 +76,15 @@ object Stomple : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
+    }
+})
+
+object HttpsGithubComStomplegoExampleTeamcityStomple1 : GitVcsRoot({
+    name = "https://github.com/stomplego/example-teamcity-stomple (1)"
+    url = "https://github.com/stomplego/example-teamcity-stomple"
+    branch = "refs/heads/feature/add_reply"
+    authMethod = password {
+        userName = "stomplego"
+        password = "credentialsJSON:1906be00-d6ce-462e-b7f7-ba4e6499609d"
     }
 })
