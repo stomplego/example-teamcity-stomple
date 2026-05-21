@@ -82,7 +82,7 @@ object Stomple : BuildType({
 object HttpsGithubComStomplegoExampleTeamcityStomple1 : GitVcsRoot({
     name = "https://github.com/stomplego/example-teamcity-stomple (1)"
     url = "https://github.com/stomplego/example-teamcity-stomple"
-    branch = "refs/heads/feature/add_reply"
+    branch = "refs/heads/master"
     authMethod = password {
         userName = "stomplego"
         password = "credentialsJSON:1906be00-d6ce-462e-b7f7-ba4e6499609d"
