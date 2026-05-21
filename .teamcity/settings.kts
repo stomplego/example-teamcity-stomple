@@ -41,6 +41,8 @@ object MavenBuild : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
+
+        cleanCheckout = true
     }
 
     steps {
