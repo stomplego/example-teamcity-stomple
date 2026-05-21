@@ -37,6 +37,8 @@ project {
 object MavenBuild : BuildType({
     name = "Maven Build"
 
+    artifactRules = "target/plaindoll-*.jar => artifacts/"
+
     params {
         param("branch", "%teamcity.build.branch%")
         param("env.NEXUS_PASSWORD", "KbUfy5zW")
