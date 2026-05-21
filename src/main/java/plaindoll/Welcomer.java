@@ -1,10 +1,9 @@
 package plaindoll;
 
-// Если хочешь больше веселья и информации про ДевОпс - приходи в мои каналы NotOps (telegram, YT, Boosty, Patreon)
+// Если хочешь больше веселья и информации про девошек - приходи в мои каналы NotOps (telegram, YT, Boosty, Patreon)
 // https://t.me/notopsofficial
 
 public class Welcomer {
-    
     public String sayWelcome() {
         return "Welcome home, good hunter. What is it your desire?";
     }
